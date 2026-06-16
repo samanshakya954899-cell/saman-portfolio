@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saman Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f7fb;
+      color: #1d2a36;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.35;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 18px auto;
+      background: #ffffff;
+      padding: 18px 22px 24px;
+      box-shadow: 0 8px 28px rgba(14, 39, 65, 0.12);
+    }
+
+    .header-wrap {
+      border-radius: 8px;
+      background: #e9f6ff;
+      padding: 0 0 6px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 12px rgba(50, 138, 190, 0.22);
+    }
+
+    .header {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background: #082c47;
+      color: #ffffff;
+      padding: 11px 22px 16px;
+      text-align: center;
+      border: 2px solid #d7e7f1;
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 100%;
+      background: #03a99b;
+    }
+
+    .header::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      right: 0;
+      bottom: 0;
+      height: 14px;
+      background: #0784c6;
+      border-top-left-radius: 14px;
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      font-size: 31px;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+
+    .role {
+      position: relative;
+      z-index: 1;
+      margin: 2px 0 2px;
+      color: #c7d8e5;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .contact {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      color: #dfeef8;
+      font-size: 12px;
+    }
+
+    .links {
+      position: relative;
+      z-index: 1;
+      margin: 8px auto -3px;
+      width: 93%;
+      border-radius: 16px;
+      background: #eef6fb;
+      color: #086c87;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      box-shadow: inset 0 0 4px rgba(12, 55, 89, 0.3);
+    }
+
+    .links span {
+      color: #1a425a;
+      margin: 0 5px;
+    }
+
+    .links a {
+      color: #086c87;
+      text-decoration: underline;
+    }
+
+    .chips {
+      display: flex;
+      gap: 7px;
+      flex-wrap: wrap;
+      margin: 8px 0 18px;
+    }
+
+    .chip {
+      border-radius: 14px;
+      color: #ffffff;
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 12px;
+      line-height: 1.25;
+    }
+
+    .blue { background: #073c68; }
+    .teal { background: #07998d; }
+    .royal { background: #1562a6; }
+    .gold { background: #d99007; }
+    .pale { background: #e8f4f3; color: #243342; border: 1px solid #cce1df; }
+    .cream { background: #fff0dc; color: #243342; border: 1px solid #ead9c0; }
+
+    .section {
+      margin-top: 15px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      margin: 0 0 8px;
+      border-radius: 6px;
+      background: #e8f8f6;
+      color: #06988e;
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      box-shadow: inset 0 0 4px rgba(0, 129, 138, 0.22);
+    }
+
+    .section-title::before {
+      content: "";
+      width: 7px;
+      height: 24px;
+      margin-right: 9px;
+      border-radius: 4px;
+      background: #04a99b;
+    }
+
+    .section-title.blue-title {
+      background: #e8f3ff;
+      color: #1f5687;
+    }
+
+    .section-title.blue-title::before {
+      background: #1765b2;
+    }
+
+    .section-title.gold-title {
+      background: #fff5e6;
+      color: #c58308;
+    }
+
+    .section-title.gold-title::before {
+      background: #df9300;
+    }
+
+    p {
+      margin: 0 0 7px;
+      font-size: 13.4px;
+    }
+
+    .skill-list {
+      font-size: 13.2px;
+      margin: 0;
+    }
+
+    .skill-list strong,
+    .item-title strong,
+    .edu strong {
+      color: #23618d;
+    }
+
+    .item {
+      margin-bottom: 8px;
+    }
+
+    .item-title {
+      font-size: 13.4px;
+      margin-bottom: 2px;
+      font-weight: 700;
+    }
+
+    .meta {
+      color: #00847b;
+      font-weight: 800;
+    }
+
+    ul {
+      margin: 3px 0 0 18px;
+      padding: 0;
+      font-size: 13.1px;
+    }
+
+    li::marker {
+      color: #06a89b;
+    }
+
+    .github {
+      color: #c18308;
+      font-weight: 800;
+    }
+
+    .project-link {
+      color: #23618d;
+      text-decoration: underline;
+    }
+
+    .edu {
+      font-size: 13.2px;
+      margin: 0;
+    }
+
+    .muted {
+      color: #61707f;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        margin: 0;
+        width: auto;
+        min-height: auto;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="header-wrap">
+      <header class="header">
+        <h1>Saman</h1>
+        <div class="role">Android Developer / Flutter Developer</div>
+        <p class="contact">Noida, India | 9548990617 | samanshakya954899@gmail.com</p>
+        <div class="links">
+          <a href="https://github.com/samanshakya954899-cell" target="_blank" rel="noopener">https://github.com/samanshakya954899-cell</a>
+          <span>|</span>
+          <a href="https://www.linkedin.com/in/saman-shakya-46aa98327" target="_blank" rel="noopener">https://www.linkedin.com/in/saman-shakya-46aa98327</a>
+        </div>
+      </header>
+    </div>
+
+    <div class="chips">
+      <span class="chip blue">Flutter</span>
+      <span class="chip teal">Kotlin</span>
+      <span class="chip royal">Jetpack Compose</span>
+      <span class="chip gold">Android</span>
+      <span class="chip pale">Firebase</span>
+      <span class="chip pale">Supabase</span>
+      <span class="chip cream">REST APIs</span>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p>
+        Entry-level Android and Flutter developer with hands-on experience in Kotlin, Flutter, MVVM
+        Architecture, Firebase Authentication, REST APIs, and mobile app development. Completed an
+        internship at Occaza Events Private Limited and built projects including Mini Property App and
+        Emotion Detection App. Currently pursuing B.Tech in Computer Science and Engineering with a
+        strong interest in building clean, user-friendly, and practical mobile applications.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title blue-title">Technical Skills</h2>
+      <p class="skill-list"><strong>Mobile Development:</strong> Flutter, Dart, Kotlin, Android Development, Jetpack Compose, MVVM, Navigation Compose</p>
+      <p class="skill-list"><strong>Backend & Databases:</strong> Python, Django, REST APIs, Firebase, Supabase, MySQL, PostgreSQL, SQLite, Firestore, SQL</p>
+      <p class="skill-list"><strong>Integrations:</strong> Firebase Authentication, Supabase Auth, Razorpay Payment Gateway, MSG91 OTP Authentication, Google Analytics, DLT Templates</p>
+      <p class="skill-list"><strong>Tools & Platforms:</strong> Git, GitHub, Android Studio, VS Code, Railway, Cline, GitHub Copilot, OpenAI Codex</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Internship Experience</h2>
+      <div class="item">
+        <div class="item-title">Cross-Platform Application Developer Intern, Occaza Events Private Limited | <span class="meta">Remote | Mar 2026 - May 2026</span></div>
+        <ul>
+          <li>Maintained Flutter applications for Android in production codebases.</li>
+          <li>Implemented features, fixed bugs, submitted pull requests, and collaborated with senior developers during code reviews.</li>
+          <li>Deployed backend services on Railway and supported API workflows for mobile app features.</li>
+          <li>Improved authentication, analytics, and backend workflows for release-ready app updates.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <p class="edu"><strong>Senior Secondary (10+2):</strong> UP Board</p>
+      <p class="edu"><strong>B.Tech in Computer Science and Engineering:</strong> Dr. A.P.J. Abdul Kalam Technical University, ABSS Institute of Technology, Meerut | 2022 - 2026 | CGPA: 7.5+/10</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title gold-title">Projects</h2>
+      <div class="item">
+        <div class="item-title">Mini Property App | <span class="meta">Kotlin, MVVM Architecture, Firebase Authentication</span></div>
+        <ul>
+          <li>Built a Mini Property App with Kotlin and MVVM Architecture that allows users to sign up, log in, and manage property listings.</li>
+          <li>Implemented Firebase authentication, add property functionality, property listing display, detailed property view, and contact owner option.</li>
+          <li>Designed a clean, user-friendly interface for smooth property browsing and management.</li>
+        </ul>
+        <p><span class="github">GitHub:</span> <a class="project-link" href="https://github.com/samanshakya954899-cell/MiniPropertyApp" target="_blank" rel="noopener">github.com/samanshakya954899-cell/MiniPropertyApp</a></p>
+      </div>
+      <div class="item">
+        <div class="item-title">Emotion Detection App | <span class="meta">Android, AI, Firebase Authentication</span></div>
+        <ul>
+          <li>Built an Android application that uses AI to detect and display human emotions in real time.</li>
+          <li>Added user sign up and login functionality using Firebase Authentication.</li>
+          <li>Analyzed facial expressions through AI and instantly displayed the detected emotion on screen with a simple, user-friendly interface.</li>
+        </ul>
+        <p><span class="github">GitHub:</span> <a class="project-link" href="https://github.com/samanshakya954899-cell/Emotion_Sensor" target="_blank" rel="noopener">github.com/samanshakya954899-cell/Emotion_Sensor</a></p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title blue-title">Certifications</h2>
+      <p><strong>Artificial Intelligence Training:</strong> Training Basket | Sep 2024 - Oct 2024</p>
+      <p><strong>Flutter Developer Internship Certificate:</strong> Occaza Events Private Limited | Mar 2026 - May 2026</p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title gold-title">Strengths</h2>
+      <ul>
+        <li>Quick learner with strong interest in computer science and programming.</li>
+        <li>Good communication, discipline, teamwork, and problem-solving attitude.</li>
+        <li>Ready to learn new technologies and improve through practical projects.</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title gold-title">Achievements</h2>
+      <ul>
+        <li>Built and deployed mobile applications with authentication, REST APIs, payment integration, and cloud deployment.</li>
+        <li>Earned a permanent role offer from Occaza Events Private Limited after strong internship performance.</li>
+        <li>Used GitHub Copilot, OpenAI Codex, and Cline for AI-assisted development and productivity.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
