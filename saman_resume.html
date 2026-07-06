@@ -22,7 +22,7 @@
       min-height: 297mm;
       margin: 18px auto;
       background: #ffffff;
-      padding: 18px 22px 24px;
+      padding: 14px 18px 18px;
       box-shadow: 0 8px 28px rgba(14, 39, 65, 0.12);
     }
 
@@ -30,7 +30,7 @@
       border-radius: 8px;
       background: #e9f6ff;
       padding: 0 0 6px;
-      margin-bottom: 10px;
+      margin-bottom: 7px;
       box-shadow: 0 0 12px rgba(50, 138, 190, 0.22);
     }
 
@@ -40,7 +40,7 @@
       border-radius: 8px;
       background: #082c47;
       color: #ffffff;
-      padding: 11px 22px 16px;
+      padding: 8px 20px 13px;
       text-align: center;
       border: 2px solid #d7e7f1;
     }
@@ -70,7 +70,7 @@
       position: relative;
       z-index: 1;
       margin: 0;
-      font-size: 31px;
+      font-size: 28px;
       letter-spacing: 0;
       font-weight: 800;
     }
@@ -95,7 +95,7 @@
     .links {
       position: relative;
       z-index: 1;
-      margin: 8px auto -3px;
+      margin: 6px auto -3px;
       width: 93%;
       border-radius: 16px;
       background: #eef6fb;
@@ -120,7 +120,7 @@
       display: flex;
       gap: 7px;
       flex-wrap: wrap;
-      margin: 8px 0 18px;
+      margin: 6px 0 10px;
     }
 
     .chip {
@@ -141,17 +141,17 @@
     .cream { background: #fff0dc; color: #243342; border: 1px solid #ead9c0; }
 
     .section {
-      margin-top: 15px;
+      margin-top: 9px;
     }
 
     .section-title {
       display: flex;
       align-items: center;
-      margin: 0 0 8px;
+      margin: 0 0 5px;
       border-radius: 6px;
       background: #e8f8f6;
       color: #06988e;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       text-transform: uppercase;
       box-shadow: inset 0 0 4px rgba(0, 129, 138, 0.22);
@@ -160,7 +160,7 @@
     .section-title::before {
       content: "";
       width: 7px;
-      height: 24px;
+      height: 20px;
       margin-right: 9px;
       border-radius: 4px;
       background: #04a99b;
@@ -185,12 +185,12 @@
     }
 
     p {
-      margin: 0 0 7px;
-      font-size: 13.4px;
+      margin: 0 0 5px;
+      font-size: 12.8px;
     }
 
     .skill-list {
-      font-size: 13.2px;
+      font-size: 12.6px;
       margin: 0;
     }
 
@@ -201,11 +201,11 @@
     }
 
     .item {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .item-title {
-      font-size: 13.4px;
+      font-size: 12.8px;
       margin-bottom: 2px;
       font-weight: 700;
     }
@@ -216,9 +216,9 @@
     }
 
     ul {
-      margin: 3px 0 0 18px;
+      margin: 2px 0 0 16px;
       padding: 0;
-      font-size: 13.1px;
+      font-size: 12.4px;
     }
 
     li::marker {
@@ -236,7 +236,7 @@
     }
 
     .edu {
-      font-size: 13.2px;
+      font-size: 12.6px;
       margin: 0;
     }
 
@@ -245,15 +245,21 @@
     }
 
     @media print {
+      @page {
+        size: A4;
+        margin: 0;
+      }
+
       body {
         background: #ffffff;
       }
 
       .page {
         margin: 0;
-        width: auto;
+        width: 210mm;
         min-height: auto;
         box-shadow: none;
+        zoom: 1.08;
       }
     }
   </style>
@@ -288,8 +294,8 @@
       <p>
         Entry-level Android and Flutter developer with hands-on experience in Kotlin, Flutter, MVVM
         Architecture, Firebase Authentication, REST APIs, and mobile app development. Completed an
-        internship at Occaza Events Private Limited and built projects including Mini Property App and
-        Emotion Detection App. Currently pursuing B.Tech in Computer Science and Engineering with a
+        internship at Occaza Events Private Limited and built projects including Fixmate and Emotion Detection App.
+        Recently completed B.Tech in Computer Science and Engineering with a
         strong interest in building clean, user-friendly, and practical mobile applications.
       </p>
     </section>
@@ -324,13 +330,14 @@
     <section class="section">
       <h2 class="section-title gold-title">Projects</h2>
       <div class="item">
-        <div class="item-title">Mini Property App | <span class="meta">Kotlin, MVVM Architecture, Firebase Authentication</span></div>
+        <div class="item-title">Fixmate - Home Service Marketplace App | <span class="meta">Flutter, Dart, Supabase, Python, Django, SQL</span></div>
         <ul>
-          <li>Built a Mini Property App with Kotlin and MVVM Architecture that allows users to sign up, log in, and manage property listings.</li>
-          <li>Implemented Firebase authentication, add property functionality, property listing display, detailed property view, and contact owner option.</li>
-          <li>Designed a clean, user-friendly interface for smooth property browsing and management.</li>
+          <li>Built a Flutter-based home/mechanic service marketplace where customers can book repair services and providers can publish services.</li>
+          <li>Implemented email/password login with Supabase Auth and role switching so the same user can act as customer or service provider.</li>
+          <li>Added customer direct booking, open service requests, provider profiles, service publishing, charges, area, experience, and availability management.</li>
+          <li>Supported booking statuses, chat, ratings, app notifications, Supabase SQL tables with Row Level Security, and a Django backend with JSON API endpoints.</li>
         </ul>
-        <p><span class="github">GitHub:</span> <a class="project-link" href="https://github.com/samanshakya954899-cell/MiniPropertyApp" target="_blank" rel="noopener">github.com/samanshakya954899-cell/MiniPropertyApp</a></p>
+        <p><span class="github">GitHub:</span> <a class="project-link" href="https://github.com/samanshakya954899-cell/Fixmate" target="_blank" rel="noopener">github.com/samanshakya954899-cell/Fixmate</a></p>
       </div>
       <div class="item">
         <div class="item-title">Emotion Detection App | <span class="meta">Android, AI, Firebase Authentication</span></div>
@@ -347,15 +354,6 @@
       <h2 class="section-title blue-title">Certifications</h2>
       <p><strong>Artificial Intelligence Training:</strong> Training Basket | Sep 2024 - Oct 2024</p>
       <p><strong>Flutter Developer Internship Certificate:</strong> Occaza Events Private Limited | Mar 2026 - May 2026</p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title gold-title">Strengths</h2>
-      <ul>
-        <li>Quick learner with strong interest in computer science and programming.</li>
-        <li>Good communication, discipline, teamwork, and problem-solving attitude.</li>
-        <li>Ready to learn new technologies and improve through practical projects.</li>
-      </ul>
     </section>
 
     <section class="section">
